@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+"use strict";
+var path = require('path');
+var fs = require('fs');
+var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
+
+function err() {
+	console.error("Usage: rproxy host [port]");
+	process.exit(1);
+}
+
+var args = process.argv;
+args.shift();
+args.shift();
+
+if (args.length < 1 || args.length > 2) {
+	err();
+}
+
+var host = args[0];
+var port = args.length == 2 ? parseInt(args[1]) : 8080;
+
+if (isNaN(port)) {
+	err();
+}
+
+require(lib+'/rproxy.js')({host:host,port:port});
