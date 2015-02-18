@@ -3,10 +3,10 @@ rproxy
 
 Creates a simple HTTP reverse proxy. Listens on a local port, proxies to the HTTP host you provide.
 
+	npm install -g rproxy
+
 CLI
 ---
-
-Npm install with -g for this option.
 
 	rproxy https://www.edusight.co 5000
 
