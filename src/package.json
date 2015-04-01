@@ -1,6 +1,6 @@
 {
   "name": "rproxy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple local HTTP reverse proxy in Node.",
   "main": "./lib/rproxy",
   "bin": {
